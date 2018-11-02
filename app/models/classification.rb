@@ -6,10 +6,5 @@ class Classification < ActiveRecord::Base
     self.select(:name).distinct
   end
 
-  def self.sailboat
-    self.where(name: "Sailboat")
-  end
-
-  #boats <> boat_classifications <> classifications
 
 end
