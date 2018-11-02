@@ -28,7 +28,7 @@ class Boat < ActiveRecord::Base
    end
 
    def self.with_three_classifications
-     self.where(id)
+     self.where(id: BoatClassification.classification_counts(3))
    end
 
    #boats <> boat_classification <> classifications
