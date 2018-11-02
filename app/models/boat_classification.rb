@@ -3,9 +3,8 @@ class BoatClassification < ActiveRecord::Base
   belongs_to :classification
 
   def self.classification_counts(num)
-    self.group(:boat_id).count.select do |key, value|
-      value == num
-    end
+    counts = self.group(:boat_id).count
+    matching_ids = counts{|boat_id, boat_count| boat_count == num}
   end
 
 end
