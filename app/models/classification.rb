@@ -6,5 +6,9 @@ class Classification < ActiveRecord::Base
     self.select(:name).distinct
   end
 
+  def longest
+    
+  end
+
 
 end
