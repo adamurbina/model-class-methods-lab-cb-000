@@ -6,7 +6,7 @@ class Classification < ActiveRecord::Base
     self.select(:name).distinct
   end
 
-  def self.sailboats
+  def self.sailboat
     self.where(name: "Sailboat")
   end
 
