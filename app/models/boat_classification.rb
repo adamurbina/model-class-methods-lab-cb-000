@@ -3,7 +3,7 @@ class BoatClassification < ActiveRecord::Base
   belongs_to :classification
 
   def self.classification_counts
-    self.group(:classification_id).count
+    self.group(:boat_id).count
   end
 
 end
