@@ -2,8 +2,8 @@ class BoatClassification < ActiveRecord::Base
   belongs_to :boat
   belongs_to :classification
 
-  def method_name
-    
+  def self.three_classifications
+
   end
 
 end
