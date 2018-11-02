@@ -17,9 +17,9 @@ class Captain < ActiveRecord::Base
   end
 
   def self.talented_seafarers
-    # self.joins(boats: :classifications).where(classifications: {name: ["Sailboat", "Motorboat"]}).distinct
+    motorboaters = Captain.motorboaters.pluck(:id)
 
-    self.joins(boats: :classifications).where(classifications: {name: "Sailboat"}).or(self.joins(boats: :classifications).where(classifications: {name: "Motorboat"}))
+    
 
   end
 
