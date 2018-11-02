@@ -6,7 +6,7 @@ class Captain < ActiveRecord::Base
   end
 
   def self.sailors
-
+    self.where(id: Boat.find_classification("Sailboat").pluck(:captain_id))
   end
 
 end
