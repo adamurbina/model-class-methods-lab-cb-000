@@ -8,7 +8,6 @@ class Captain < ActiveRecord::Base
 
   def self.sailors
     #self.where(id: Boat.find_classification("Sailboat").pluck(:captain_id))
-    # self.joins(boats: :classifications).where("classifications.name = ?", "Sailboat").distinct
     self.joins(boats: :classifications).where(classifications: {name: "Sailboat"}).distinct
   end
 
