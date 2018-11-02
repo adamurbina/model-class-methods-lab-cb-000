@@ -28,7 +28,7 @@ class Boat < ActiveRecord::Base
    end
 
    def self.with_three_classifications
-     self.joins(:classifications).where(classifications: {name: "Sailboat"})
+     self.find(BoatClassification.classification_counts(3))
    end
 
    boats <> boat_classification <> classifications
