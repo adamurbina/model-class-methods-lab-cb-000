@@ -13,4 +13,8 @@ class Captain < ActiveRecord::Base
     self.where(id: [Boat.find_classification("Motorboat").pluck(:captain_id), Boat.find_classification("Sailboat").pluck(:captain_id)].flatten)
   end
 
+  def non_sailors
+    
+  end
+
 end
