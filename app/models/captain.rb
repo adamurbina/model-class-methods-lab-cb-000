@@ -11,6 +11,11 @@ class Captain < ActiveRecord::Base
     self.joins(boats: :classifications).where(classifications: {name: "Sailboat"}).distinct
   end
 
+  def self.motorboaters
+    #self.where(id: Boat.find_classification("Sailboat").pluck(:captain_id))
+    self.joins(boats: :classifications).where(classifications: {name: "Motorboat"}).distinct
+  end
+
   def self.talented_seafarers
     # self.joins(boats: :classifications).where(classifications: {name: ["Sailboat", "Motorboat"]}).distinct
 
