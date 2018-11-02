@@ -7,7 +7,7 @@ class Classification < ActiveRecord::Base
   end
 
   def self.sailboats
-    self.where("name = Sailboats")
+    self.where(name: "Sailboat")
   end
 
   #boats <> boat_classifications <> classifications
