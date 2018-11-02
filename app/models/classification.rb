@@ -11,5 +11,5 @@ class Classification < ActiveRecord::Base
   end
 
   #boats <> boat_classifications <> classifications
-  
+
 end
