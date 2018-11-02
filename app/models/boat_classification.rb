@@ -3,7 +3,7 @@ class BoatClassification < ActiveRecord::Base
   belongs_to :classification
 
   def self.three_classifications
-
+    self.group(:classification_id)
   end
 
 end
