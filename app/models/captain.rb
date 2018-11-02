@@ -19,7 +19,8 @@ class Captain < ActiveRecord::Base
   def self.talented_seafarers
     motorboaters = self.motorboaters.pluck(:id)
     sailors = self.motorboaters.pluck(:id)
-    self.where(id: [motorboaters, sailors].flatten.uniq)
+    ids = 
+    self.where(id: [motorboaters & sailors])
 
 
 
