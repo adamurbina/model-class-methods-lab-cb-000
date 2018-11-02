@@ -18,8 +18,9 @@ class Captain < ActiveRecord::Base
 
   def self.talented_seafarers
     motorboaters = Captain.motorboaters.pluck(:id)
+    sailors = Captain.motorboaters.pluck(:id)
 
-    
+
 
   end
 
