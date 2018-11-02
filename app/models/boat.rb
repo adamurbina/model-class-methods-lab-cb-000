@@ -31,7 +31,4 @@ class Boat < ActiveRecord::Base
      self.where(id: BoatClassification.classification_counts(3))
    end
 
-   #boats <> boat_classification <> classifications
-
-
 end
