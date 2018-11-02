@@ -36,4 +36,8 @@ class Boat < ActiveRecord::Base
      self.joins(:classifications).where(classifications: {name: name})
    end
 
+  #  def self.longest
+  #    self.where("length = ?")
+  #  end
+
 end
