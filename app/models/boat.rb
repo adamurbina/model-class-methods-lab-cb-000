@@ -31,7 +31,7 @@ class Boat < ActiveRecord::Base
      self.find(BoatClassification.classification_counts(3))
    end
 
-   boats <> boat_classification <> classifications
+   #boats <> boat_classification <> classifications
 
 
 end
