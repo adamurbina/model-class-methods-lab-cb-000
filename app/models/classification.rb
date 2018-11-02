@@ -10,9 +10,6 @@ class Classification < ActiveRecord::Base
     self.where(name: "Sailboat")
   end
 
-  def method_name
-
-  end
   #boats <> boat_classifications <> classifications
 
 end
