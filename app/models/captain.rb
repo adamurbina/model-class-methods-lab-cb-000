@@ -2,7 +2,8 @@ class Captain < ActiveRecord::Base
   has_many :boats
 
   def self.catamaran_operators
-    self.where(id: Boat.find_classification("Catamaran").pluck(:captain_id))
+    #self.where(id: Boat.find_classification("Catamaran").pluck(:captain_id))
+    self.joins(boats: :classifications).where("classifications.name = ?", "Catamaran").distinct
   end
 
   def self.sailors
