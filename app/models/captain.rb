@@ -1,7 +1,7 @@
 class Captain < ActiveRecord::Base
   has_many :boats
 
-  def method_name
+  def catamaran_operators
     
   end
 
