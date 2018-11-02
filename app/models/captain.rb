@@ -9,4 +9,8 @@ class Captain < ActiveRecord::Base
     self.where(id: Boat.find_classification("Sailboat").pluck(:captain_id))
   end
 
+  def self.talented_seafarers
+    
+  end
+
 end
