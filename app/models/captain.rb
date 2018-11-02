@@ -10,7 +10,7 @@ class Captain < ActiveRecord::Base
   end
 
   def self.talented_seafarers
-    
+    self.where(id: [Boat.find_classification("Motorboat").pluck(:captain_id), Boat.find_classification("Sailboat").pluck(:captain_id)].flatten)
   end
 
 end
