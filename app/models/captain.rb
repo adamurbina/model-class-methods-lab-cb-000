@@ -15,7 +15,7 @@ class Captain < ActiveRecord::Base
   end
 
   def non_sailors
-    
+
   end
 
 end
